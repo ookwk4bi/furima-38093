@@ -1,8 +1,5 @@
 <%= render "shared/second-header"%>
-
-<%# 「モデル名」にはUserモデルであれば@userを渡しましょう。「新規登録機能へのパス」は、devise導入後にrails routesを実行してdevise/registrations#createへのパスを確認し、記載してください。 %>
-<%= form_with model: @user, url:  user_registration_path, class: 'registration-main', local: true do |f| %>
-<%# //「モデル名」にはUserモデルであれば@userを渡しましょう。「新規登録機能へのパス」は、devise導入後にrails routesを実行してdevise/registrations#createへのパスを確認し、記載してください。 %>
+<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
@@ -10,9 +7,8 @@
     </h1>
   </div>
 
-  <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-  <%# render 'shared/error_messages', model: f.object %>
-  <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+  <%# インスタンスを渡して、エラー発生時にメッセージが表示%>
+  <%= render 'shared/error_messages', model: f.object %>
 
   <div class="form-group">
     <div class='form-text-wrap'>
@@ -33,6 +29,7 @@
       <label class="form-text">パスワード</label>
       <span class="indispensable">必須</span>
     </div>
+    <%# passwordとpassword_confirmationが一致しているか確認後、暗号化してコントローラーに渡す(encrypted_password) %>
     <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
     <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
   </div>
@@ -104,5 +101,4 @@
   <p class='register-info'>本人情報の登録について</p>
 </div>
 <% end %>
-
 <%= render "shared/second-footer"%>
