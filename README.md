@@ -9,7 +9,7 @@
 | first_name         | string | null: false 
 | last_name_kana     | string | null: false 
 | first_name_kana    | string | null: false 
-| birthday_date      | string | null: false 
+| birthday           | date   | null: false 
 
 
 
@@ -17,7 +17,7 @@
 
 - has_many :items
 - has_many :orders
-- has_many :comments
+
 
 ## items テーブル
 
@@ -38,7 +38,7 @@
 
 - belongs_to :user
 - has_one :order
-- has_many :comments
+
 
 ## orders テーブル
 
