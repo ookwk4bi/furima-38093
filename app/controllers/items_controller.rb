@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   # ログインしていないユーザーはログインページに促す
-  before_action :authenticate_user!, except: [:index]
+  
 
   def index
     @items = Item.includes(:user).order('created_at DESC')
@@ -17,6 +17,10 @@ class ItemsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @item = Item.find(params[:id])
   end
 
   private
