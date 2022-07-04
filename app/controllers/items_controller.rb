@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   # ログインしていないユーザーはログインページに促す
-  before_action :authenticate_user!, except: [:index,:show]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @items = Item.includes(:user).order('created_at DESC')
@@ -21,11 +21,8 @@ class ItemsController < ApplicationController
 
   def edit
     @item = Item.find(params[:id])
-    unless @item.user_id == current_user.id
-      redirect_to action: :index
-    end
-    end
-  
+    redirect_to action: :index unless @item.user_id == current_user.id
+  end
 
   def update
     @item = Item.find(params[:id])
@@ -34,9 +31,8 @@ class ItemsController < ApplicationController
       redirect_to item_path(item_params)
     else
       render :edit
+    end
   end
-  end
-
 
   def show
     @item = Item.find(params[:id])
