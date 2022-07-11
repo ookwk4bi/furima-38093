@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe OrderForm, type: :model do
   before do
     @order_form = FactoryBot.build(:order_form)
-    sleep 0.1
   end
 
   describe '配送先情報の保存' do
@@ -101,15 +100,11 @@ RSpec.describe OrderForm, type: :model do
         @order_form.valid?
         expect(@order_form.errors.full_messages).to include('Phone number is invalid')
       end
-      
-      it "tokenが空では登録できないこと" do
-        @order.token = nil
-        @order.valid?
-        expect(@order.errors.full_messages).to include("Token can't be blank")
+      it 'トークンが空だと保存できないこと' do
+        @order_form.token = nil
+        @order_form.valid?
+        expect(@order_form.errors.full_messages).to include("Token can't be blank")
       end
-      
     end
   end
 end
-
-

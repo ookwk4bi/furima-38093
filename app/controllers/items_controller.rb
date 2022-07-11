@@ -24,7 +24,6 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
@@ -39,7 +38,6 @@ class ItemsController < ApplicationController
     @item.destroy
     redirect_to root_path
   end
-      
 
   def show
   end
@@ -57,8 +55,8 @@ class ItemsController < ApplicationController
 
   def redirect_root
     if @item.user_id == current_user.id && @item.order.nil?
-      else
+    else
       redirect_to root_path
     end
   end
-  end
+end
