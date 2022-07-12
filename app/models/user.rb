@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   # テーブルアソシエーション
   has_many :items
-
+  has_many :orders
   # 半角英数字（空文字NG）以外の場合には、メッセージを出す
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: 'Include both letters and numbers'
