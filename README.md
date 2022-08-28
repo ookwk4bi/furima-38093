@@ -83,7 +83,7 @@ https://furima-38093.herokuapp.com/
 
 # ER 図
 
-![ER図(furima)](https://i.gyazo.com/96ba303d797342dfb9409f7e81e74151.gif)
+![ER図(furima)](https://i.gyazo.com/fd66819ade79a32c60657b167562ed0d.png)
 
 <br>
 <br>
