@@ -13,8 +13,6 @@
 <br>
 
 # URL 
-#### AWS EC2によるデプロイ（停止中）
-http://54.248.239.158/
 
 #### Herokuによるデプロイ
 https://furima-38093.herokuapp.com/
