@@ -36,4 +36,12 @@ class Item < ApplicationRecord
     validates :shipping_cost_id
     validates :shipping_date_id
   end
+
+  def self.search(search)
+    if search != ""
+      Item.where(['name LIKE(?)', "%#{search}%"])
+    else
+      Item.all
+    end
+  end
 end
