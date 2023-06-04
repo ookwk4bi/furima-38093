@@ -98,8 +98,7 @@ Chromeの最新版を利用してアクセスしてください。ただしデ�
 
 ## 6.検索機能
 出品商品名で検索できます。
-
-![6 search](https://i.gyazo.com/53db7017d34a54f54e09257b7214a7e8.gif)](https://gyazo.com/53db7017d34a54f54e09257b7214a7e8)
+<br>
 [![Image from Gyazo](https://i.gyazo.com/53db7017d34a54f54e09257b7214a7e8.gif)](https://gyazo.com/53db7017d34a54f54e09257b7214a7e8)
 <br>
 
