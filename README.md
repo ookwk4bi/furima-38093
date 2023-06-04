@@ -97,6 +97,7 @@ Chromeの最新版を利用してアクセスしてください。ただしデ�
 <br>
 
 ## 6.検索機能
+
 検索フォームに出品商品名を入れると検索できます。
 
 [![Image from Gyazo](https://i.gyazo.com/53db7017d34a54f54e09257b7214a7e8.gif)](https://gyazo.com/53db7017d34a54f54e09257b7214a7e8)
